@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Confirm Registration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="confirm()" #confirmForm="ngForm">
+    <ion-row>
+      <ion-col>
+        <ion-list inset>
+          <ion-item>
+            <ion-input type="text" placeholder="Verification code" name="code" [(ngModel)]="code" required></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button ion-button class="submit-btn" expand="full" type="submit" [disabled]="!confirmForm.form.valid || loading"><div *ngIf="!loading">Confirm</div><ion-spinner name="dots" *ngIf="loading"></ion-spinner></ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+  <ion-row>
+    <ion-col>
+      <ion-button ion-button class="submit-btn" expand="full" (click)="resend()">Resend Code?</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

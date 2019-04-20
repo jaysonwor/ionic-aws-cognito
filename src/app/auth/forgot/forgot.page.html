@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Forgot Password</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="send()" #forgotForm="ngForm">
+    <ion-row>
+      <ion-col>
+        <ion-list inset>
+          <ion-item>
+            <ion-input type="email" placeholder="Email" name="email" [(ngModel)]="email" required></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button ion-button class="submit-btn" expand="full" type="submit" [disabled]="!forgotForm.form.valid || loading"><div *ngIf="!loading">Submit</div><ion-spinner name="dots" *ngIf="loading"></ion-spinner></ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

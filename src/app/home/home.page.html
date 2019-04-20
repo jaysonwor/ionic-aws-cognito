@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="ion-padding">
+    Welcome: {{ email }}
+  </div>
+
+  <ion-row>
+    <ion-col>
+      <ion-button expand="full" (click)="logout()">Logout</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button expand="full" routerLink="/profile/change-password">Change Password</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button expand="full" routerLink="/profile/view">View Profile</ion-button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button expand="full" routerLink="/profile/edit">Edit Profile</ion-button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

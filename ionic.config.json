@@ -1,0 +1,7 @@
+{
+  "name": "ionic-aws-cognito",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
